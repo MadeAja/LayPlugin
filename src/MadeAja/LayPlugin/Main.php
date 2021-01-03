@@ -41,7 +41,7 @@ class Main extends PluginBase implements Listener
     public function isLay(Player $player): bool
     {
         $name = strtolower($player->getName());
-        if (!isset($this->layData[$name])) {
+        if (!isset(self::$layData[$name])) {
             return false;
         }
         return true;
